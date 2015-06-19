@@ -1,0 +1,20 @@
+﻿@using Tabi.Models
+
+@{
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+<body>
+     <div>
+            <label class="text-center" style="font-size:70px;font-family:Stencil;color:deepskyblue;width:100%;">Details</label>
+        </div>
+        <br>
+        <br />
+    <h1 class="text-center" style="color:deepskyblue"> Add Detalis of Item</h1>
+    <form class="container well" action="/AdminPanel/Submit" method="post">
+        <input type="text" name="Name" placeholder="Name OF Item" /><br />
+        <br />
+        <input type="text" name="Price" placeholder="Price OF Item" />
+
+        <input type="Submit" />
+    </form>
+</body>

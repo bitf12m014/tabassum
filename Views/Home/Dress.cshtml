@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Dress";
+}
+
+@using Tabi.Models
+@model IEnumerable<Item>
+
+
+<body >
+     <div>
+            <label class="text-center" style="font-size:70px;font-family:Stencil;color:deepskyblue;width:100%;"> Dress</label>
+        </div>
+        <br>
+        <br />
+    <div>
+        <div class="row">
+            @foreach (Item s in Model)
+            {
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                    <div class="thumbnail" >
+                        <img style="max-height:250px;max-width:250px" src="~/Content/Items/@s.Picture" />
+                        <hr />
+                        <div class="caption">
+
+                            <div class="row">
+
+                                <p class="">Name: @s.Name</p><h4 class="">Price: @s.Price</h4>
+                            </div>
+                            <div class="row">
+
+                                <!--<a href="#" class="btn btn-default" >Hello</a>-->
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+ 
+</body>

@@ -1,0 +1,47 @@
+﻿@using Tabi.Models
+@model IEnumerable<Item>
+@{
+    
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/UserNavBar.cshtml";
+}
+
+<body>
+     <div>
+            <label class="text-center" style="font-size:70px;font-family:Stencil;color:deepskyblue;width:100%;"> Order</label>
+        </div>
+        <br>
+        <br />
+     <div class="container well well-sm">
+              <div class="container well well-sm col-lg-8" style="margin-left:15%">
+        <table class="table" style="border:solid">
+
+            <thead>
+                <tr class="btn-primary" style="text-align:center">
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+
+                    
+                </tr>
+            </thead>
+
+            @foreach (Item obj in Model)
+            {
+                    <tr>
+                        <td>@obj.Id</td>
+                        <td>@obj.Name</td>
+                        <td>@obj.Price</td>
+
+                        
+                       @* <td><a href="/AdminPanel/getItem/@obj.Id">Update</a></td>*@
+                    </tr>
+                
+            }
+
+
+        </table>
+    </div>
+    </div>
+    </body>
